@@ -9,7 +9,56 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <style>
-        /* moved into head so it is applied */
+        
+         /* Color palette: muted green accent, separate light and dark themes */
+        :root{
+            --bg: #fafbfd;            
+            --text: #17202a;          
+            --muted: #57606a;         
+            --card: #ffffff;          
+            --header-bg: linear-gradient(90deg,#2e7d60,#4aa07a); 
+            --accent: #16e9d7;       
+            --link: #1f6feb;         
+            --border: rgba(20,34,45,0.06);
+        }
+        .dark-theme{
+            --bg: #0b1220;
+            --text: #e6eef6;
+            --muted: #a9b7c2;
+            --card: #0f1724;
+            --header-bg: linear-gradient(90deg,#1f4f3f,#2e7d60);
+            --accent: #16e9d7;
+            --link: #7fb5ff;
+            --border: rgba(255,255,255,0.04);
+        }
+         .tab-btn {
+            background: transparent;
+            border: none;
+            padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+            border-radius: 1.5rem 1.5rem 0 0;
+            color: #fff !important;
+            font-weight: 600;
+            font-size: 1.08rem;
+            cursor: pointer;
+            position: relative;
+            transition: background 0.18s, color 0.18s;
+        }
+        .tab-btn[aria-selected="true"], .tab-btn.active {
+            background: transparent;
+            color: #fff !important;
+        }
+        .tab-btn:hover {
+            background: rgba(255,255,255,0.13);
+            color: #fff !important;
+        }
+        .dark-theme .tab-btn[aria-selected="true"], .dark-theme .tab-btn.active {
+            background: rgba(255,255,255,0.13);
+            color: #fff !important;
+        }
+
+
+
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -47,7 +96,11 @@
         <div style="text-align:left">Zurück</div>
 
         <div style="text-align:right"> Weiter</div>
+        
     </div>
+    
+    <button style=margin-left:80vw id="theme-toggle" class="theme-toggle" aria-label="Toggle night mode";>🌙
+    </button>
 
 
     <div style="background-color:rgb(10, 0, 148);color:white;text-align:center;">
@@ -74,8 +127,9 @@
     </div>
 
 
-    <div style="margin-left :10vw; margin-top:10px;width:80vw;">
+    <div style=" margin:0 0px 50px  00px">
         <table>
+            <h2>bisheriges:</h2>
             <tr> <!--th =header, td = ? untendrunter-->
                 <th> Jahr</th>
                 <th> Ort</th>
@@ -103,7 +157,7 @@
         </table>
     </div>
 
-    <h3>Karten</h3>
+    <h2>Karten</h2>
 
     <div class="gallery" style="display:flex; gap:1rem; flex-wrap:wrap; align-items:stretch;">
         <div id="map1" class="gallery-item" style="flex:1 1 25vw; min-height:40vh;"></div>
