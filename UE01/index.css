@@ -1,7 +1,7 @@
 /* Theme Variablen */
 :root {
     --bg-primary: #ffffff;
-    --bg-secondary: #f8f9fa;
+    --bg-secondary: #d7d8d8;
     --text-primary: #333333;
     --text-secondary: #666666;
     --accent-color: #16e9d7;
@@ -35,7 +35,7 @@ body {
 /* Theme Toggle Button */
 .theme-toggle {
     position: fixed;
-    top: 20px;
+    top: 10px;
     right: 20px;
     padding: 10px;
     border-radius: 50%;
@@ -43,7 +43,7 @@ body {
     background: var(--bg-secondary);
     color: var(--text-primary);
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
     z-index: 1000;
 }
@@ -70,7 +70,7 @@ td {
 
 th {
     background-color: var(--accent-color);
-    color: var(--text-primary);
+    color: black;
 }
 
 a {
@@ -102,4 +102,54 @@ a:hover {
 
 .news_image {
     max-width: 50vw;
+}
+
+.logoLink {
+    line-height: unset;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.logoLink>a {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    height: 20px;
+    width: 20px;
+    transition: all 0.3s ease;
+}
+
+.logoLink img {
+    width: 20px;
+    height: 20px;
+}
+
+.logoLink>a:hover {
+    transform: scale(1.1);
+}
+
+.tab-btn {
+    background-color: var(--bg-secondary);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5%;
+    border: none;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    margin-left: 10px;
+    width: 100px;
 }

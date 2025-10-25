@@ -31,7 +31,7 @@
         <h1 style=>Hallo!<br><i>Ich bin ah1test2</i><br /></h1>
     </div>
 
-    <div class="tab-content" id="about" data-tab="about">
+    <div class="tab-content hidden" id="about" data-tab="about">
 
         <div style="display:flex; align-items:flex-start; gap:1rem; flex-wrap:wrap;">
             <div style="flex:1; min-width:220px;">
@@ -86,14 +86,10 @@
 
     <div class="tab-content hidden" id="news" data-tab="news">
         <h2>Neuigkeiten</h2>
-        <ul>
-            <li>Neuigkeit 1: Ich habe angefangen, diese Webseite zu erstellen.</li>
-            <li>Neuigkeit 2: Ich habe einige Kartenprojekte hinzugefügt.</li>
-            <li>Neuigkeit 3: Ich habe den Dark Mode implementiert.</li>
-        </ul>
+
     </div>
 
-    <div class="tab-content hidden" id="projects" data-tab="projects">
+    <div class="tab-content " id="projects" data-tab="projects">
         <h2>Karten</h2>
 
         <div class="gallery" style="display:flex; gap:1rem; flex-wrap:wrap; align-items:stretch;">
@@ -103,10 +99,13 @@
         </div>
     </div>
 
-    <div style="width: 20vw;;font-size:20px;text-align:center; padding: 5px; margin-top:10px; margin-left:70vw">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Logo_Hochschule_Mainz.svg" style="width:12vw;" />
-        <br />
-        <a href="https://www.hs-mainz.de/" style="font-size:10px;">Hier geht's zur Webseite der Hochschule Mainz!</a>
+    <div class="logoLink">
+        <a href="https://www.hs-mainz.de/" target="_blank">
+            <img src="assets/Logo_Hochschule_Mainz.svg" alt="HS Mainz Logo" />
+        </a>
+        <a href="https://github.com/ah1test2" target="_blank">
+            <img src="assets/github-142-svgrepo-com.svg" alt="GitHub Logo" />
+        </a>
     </div>
 </body>
 
