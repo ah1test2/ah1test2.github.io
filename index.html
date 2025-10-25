@@ -8,105 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-       <style>
-        /* Theme Variablen */
-        :root {
-            --bg-primary: #ffffff;
-            --bg-secondary: #f8f9fa;
-            --text-primary: #333333;
-            --text-secondary: #666666;
-            --accent-color: #16e9d7;
-            --border-color: #e0e0e0;
-            --link-color: #0078d7;
-            --header-bg: rgb(10, 0, 148);
-        }
-
-        /* Dark Theme Variablen */
-        [data-theme="dark"] {
-            --bg-primary: #1a1a1a;
-            --bg-secondary: #2d2d2d;
-            --text-primary: #ffffff;
-            --text-secondary: #cccccc;
-            --accent-color: #16e9d7;
-            --border-color: #404040;
-            --link-color: #66b3ff;
-            --header-bg: #000066;
-        }
-
-        /* Basis Styles */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 2vw 5vh;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* Theme Toggle Button */
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 10px;
-            border-radius: 50%;
-            border: none;
-            background: var(--bg-secondary);
-            color: var(--text-primary);
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-
-        .theme-toggle:hover {
-            transform: scale(1.1);
-        }
-
-        /* Angepasste Styles für Dark Mode */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-        }
-
-        th,
-        td {
-            padding: 0.5rem;
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-        }
-
-        th {
-            background-color: var(--accent-color);
-            color: var(--text-primary);
-        }
-
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .header-section {
-            background-color: var(--header-bg);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .gallery-item {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 
@@ -115,6 +17,13 @@
     <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
         🌙
     </button>
+
+    <div class="tab-buttons" role="tablist" aria-label="Sections">
+        <button class="tab-btn" data-tab="about" role="tab" aria-selected="true">About</button>
+        <button class="tab-btn" data-tab="news" role="tab" aria-selected="false">News</button>
+        <button class="tab-btn" data-tab="projects" role="tab" aria-selected="false">Projects</button>
+        <div class="tab-indicator" id="tab-indicator" style="width:0"></div>
+    </div>
 
 
 
@@ -136,8 +45,8 @@
         </div>
 
         <div style="flex:0 0 40vw; display:flex; justify-content:flex-end;margin: 20px 0 40px;">
-            <img src="https://www.hs-mainz.de/fileadmin/Hochschule/Presse_Medien/img/HSM_visual_v2.jpg"
-                alt="Bild" style="max-width:100%; height:auto; display:block;">
+            <img src="https://www.hs-mainz.de/fileadmin/Hochschule/Presse_Medien/img/HSM_visual_v2.jpg" alt="Bild"
+                style="max-width:100%; height:auto; display:block;">
         </div>
     </div>
 
@@ -180,43 +89,6 @@
         <div id="map3" class="gallery-item" style="flex:1 1 25vw; min-height:40vh;"></div>
     </div>
 
-    <script>
-        // initialise three Leaflet maps
-        const mapConfigs = [
-            { id: 'map1', center: [49.98847, 8.22739], zoom: 16 },
-            { id: 'map2', center: [49.99727, 8.277919], zoom: 16 },
-            { id: 'map3', center: [50, 8.27], zoom: 13 }
-        ];
-
-        mapConfigs.forEach(cfg => {
-            const m = L.map(cfg.id).setView(cfg.center, cfg.zoom);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; OpenStreetMap contributors'
-            }).addTo(m);
-            // Theme Toggle Funktionalität
-        const themeToggle = document.getElementById('themeToggle');
-
-        // Prüfe gespeichertes Theme oder System-Einstellung
-        const savedTheme = localStorage.getItem('theme') ||
-            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-        // Setze initiales Theme
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
-
-        // Theme Toggle Handler
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
-        });
-
-        });
-    </script>
-
     <div style="width: 20vw;;font-size:20px;text-align:center; padding: 5px; margin-top:10px; margin-left:70vw">
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Logo_Hochschule_Mainz.svg" style="width:12vw;" />
         <br />
@@ -229,5 +101,7 @@
     </div>
 
 </body>
+
+<script src="index.js"></script>
 
 </html>
