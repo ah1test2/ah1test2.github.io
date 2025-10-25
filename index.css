@@ -95,3 +95,11 @@ a:hover {
     background-color: var(--bg-secondary);
     border: 1px solid var(--border-color);
 }
+
+.hidden {
+    display: none;
+}
+
+.news_image {
+    max-width: 50vw;
+}

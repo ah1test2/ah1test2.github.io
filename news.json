@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Neuigkeit 1",
+        "date": "2024-06-01",
+        "content": "Ich habe angefangen, diese Webseite zu erstellen.",
+        "imageUrl": "https://www.hs-mainz.de/fileadmin/Hochschule/Presse_Medien/img/HSM_visual_v2.jpg"
+    },
+    {
+        "title": "Neuigkeit 2",
+        "date": "2024-06-02",
+        "content": "Ich habe einige Kartenprojekte hinzugefügt.",
+        "imageUrl": "https://www.hs-mainz.de/fileadmin/Hochschule/Presse_Medien/img/HSM_visual_v2.jpg"
+    },
+    {
+        "title": "Neuigkeit 3",
+        "date": "2024-06-03",
+        "content": "Ich habe den Dark Mode implementiert.",
+        "imageUrl": "https://www.hs-mainz.de/fileadmin/Hochschule/Presse_Medien/img/HSM_visual_v2.jpg"
+    },
+    {
+        "title": "Neuigkeit 4",
+        "date": "2024-06-04",
+        "content": "Ich habe ein Kontaktformular hinzugefügt.",
+        "imageUrl": "https://www.hs-mainz.de/fileadmin/Hochschule/Presse_Medien/img/HSM_visual_v2.jpg"
+    }
+]

@@ -31,62 +31,76 @@
         <h1 style=>Hallo!<br><i>Ich bin ah1test2</i><br /></h1>
     </div>
 
-    <div style="display:flex; align-items:flex-start; gap:1rem; flex-wrap:wrap;">
-        <div style="flex:1; min-width:220px;">
-            <h2>Dieser Text ist über mich</h2>
-            <p>Ich mache diese Aufgabe als Übung für Geoinformatik 2<br>
-                huedhuhdfhgdshgudfsgu<br>
-                giudfgfgufdadhdsfkh<br>
-                hifddgfagfdsagu<br>
-                hiwefgifwguwfegu<br><br>
-                <i>Meine GitHub Seite:
-                    <a href="https://ah1test2.github.io/" target="_blank">ah1test2.github.io</a></i>
-            </p>
+    <div class="tab-content" id="about" data-tab="about">
+
+        <div style="display:flex; align-items:flex-start; gap:1rem; flex-wrap:wrap;">
+            <div style="flex:1; min-width:220px;">
+                <h2>Dieser Text ist über mich</h2>
+                <p>Ich mache diese Aufgabe als Übung für Geoinformatik 2<br>
+                    huedhuhdfhgdshgudfsgu<br>
+                    giudfgfgufdadhdsfkh<br>
+                    hifddgfagfdsagu<br>
+                    hiwefgifwguwfegu<br><br>
+                    <i>Meine GitHub Seite:
+                        <a href="https://ah1test2.github.io/" target="_blank">ah1test2.github.io</a></i>
+                </p>
+            </div>
+
+            <div style="flex:0 0 40vw; display:flex; justify-content:flex-end;margin: 20px 0 40px;">
+                <img src="https://www.hs-mainz.de/fileadmin/Hochschule/Presse_Medien/img/HSM_visual_v2.jpg" alt="Bild"
+                    style="max-width:100%; height:auto; display:block;">
+            </div>
         </div>
 
-        <div style="flex:0 0 40vw; display:flex; justify-content:flex-end;margin: 20px 0 40px;">
-            <img src="https://www.hs-mainz.de/fileadmin/Hochschule/Presse_Medien/img/HSM_visual_v2.jpg" alt="Bild"
-                style="max-width:100%; height:auto; display:block;">
+
+        <div style=" margin:0 0px 50px  00px">
+            <table>
+                <h2>bisheriges:</h2>
+                <tr> <!--th =header, td = ? untendrunter-->
+                    <th> Jahr</th>
+                    <th> Ort</th>
+                    <th> Zweck</th>
+
+                </tr>
+                <tr>
+                    <td> 7272</td>
+                    <td> sffdg</td>
+                    <td> zrerez</td>
+
+                </tr>
+                <tr>
+                    <td> 3938</td>
+                    <td> dodf</td>
+                    <td> eswhegr</td>
+
+                </tr>
+                <tr>
+                    <td> e4447</td>
+                    <td> yddg</td>
+                    <td> uztu</td>
+
+                </tr>
+            </table>
         </div>
     </div>
 
-
-    <div style=" margin:0 0px 50px  00px">
-        <table>
-            <h2>bisheriges:</h2>
-            <tr> <!--th =header, td = ? untendrunter-->
-                <th> Jahr</th>
-                <th> Ort</th>
-                <th> Zweck</th>
-
-            </tr>
-            <tr>
-                <td> 7272</td>
-                <td> sffdg</td>
-                <td> zrerez</td>
-
-            </tr>
-            <tr>
-                <td> 3938</td>
-                <td> dodf</td>
-                <td> eswhegr</td>
-
-            </tr>
-            <tr>
-                <td> e4447</td>
-                <td> yddg</td>
-                <td> uztu</td>
-
-            </tr>
-        </table>
+    <div class="tab-content hidden" id="news" data-tab="news">
+        <h2>Neuigkeiten</h2>
+        <ul>
+            <li>Neuigkeit 1: Ich habe angefangen, diese Webseite zu erstellen.</li>
+            <li>Neuigkeit 2: Ich habe einige Kartenprojekte hinzugefügt.</li>
+            <li>Neuigkeit 3: Ich habe den Dark Mode implementiert.</li>
+        </ul>
     </div>
 
-    <h2>Karten</h2>
+    <div class="tab-content hidden" id="projects" data-tab="projects">
+        <h2>Karten</h2>
 
-    <div class="gallery" style="display:flex; gap:1rem; flex-wrap:wrap; align-items:stretch;">
-        <div id="map1" class="gallery-item" style="flex:1 1 25vw; min-height:40vh;"></div>
-        <div id="map2" class="gallery-item" style="flex:1 1 25vw; min-height:40vh;"></div>
-        <div id="map3" class="gallery-item" style="flex:1 1 25vw; min-height:40vh;"></div>
+        <div class="gallery" style="display:flex; gap:1rem; flex-wrap:wrap; align-items:stretch;">
+            <div id="map1" class="gallery-item" style="flex:1 1 25vw; min-height:40vh;"></div>
+            <div id="map2" class="gallery-item" style="flex:1 1 25vw; min-height:40vh;"></div>
+            <div id="map3" class="gallery-item" style="flex:1 1 25vw; min-height:40vh;"></div>
+        </div>
     </div>
 
     <div style="width: 20vw;;font-size:20px;text-align:center; padding: 5px; margin-top:10px; margin-left:70vw">
@@ -94,14 +108,8 @@
         <br />
         <a href="https://www.hs-mainz.de/" style="font-size:10px;">Hier geht's zur Webseite der Hochschule Mainz!</a>
     </div>
-
-
-    <div class="vier">
-        <marquee behavior="alternate"><strong>Danke fürs lesen</strong></marquee>
-    </div>
-
 </body>
 
-<script src="index.js"></script>
+<script src="index_functions.js"></script>
 
 </html>
